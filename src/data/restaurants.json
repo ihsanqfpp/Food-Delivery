@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Chinese Restaurant",
+    "category": "chinese",
+    "image": "assets/images/Chinese-2.jpg",
+    "description": "Authentic Szechuan and Cantonese delicacies crafted by master chefs using traditional techniques.",
+    "rating": 3.5,
+    "priceRange": "$20",
+    "openingTime": "4pm to 11pm",
+    "location": "Peshawar University Road",
+    "contact": "+92 111-222-33"
+  },
+  {
+    "id": 2,
+    "name": "Bella Italia",
+    "category": "italian",
+    "image": "assets/images/Italian.jpg",
+    "description": "Experience the heart of Italy with our handmade pasta, wood-fired pizzas, and curated wine pairings.",
+    "rating": 3.5,
+    "priceRange": "$15",
+    "openingTime": "4pm to 11pm",
+    "location": "Peshawar University Road",
+    "contact": "+92 111-222-33"
+  },
+  {
+    "id": 3,
+    "name": "Saffron Spice",
+    "category": "indian",
+    "image": "assets/images/Indian-1.jpg",
+    "description": "A vibrant journey of spices and flavors, featuring slow-cooked biryanis and clay-oven tandoori treats.",
+    "rating": 3.5,
+    "priceRange": "$17",
+    "openingTime": "4pm to 11pm",
+    "location": "Peshawar University Road",
+    "contact": "+92 111-222-33"
+  },
+  {
+    "id": 4,
+    "name": "Khyber Grill",
+    "category": "pakistani",
+    "image": "assets/images/Indian-2.jpg",
+    "description": "Traditional flavors of the frontier, specialized in robust karahis and succulent grilled kebabs.",
+    "rating": 3.5,
+    "priceRange": "$15",
+    "openingTime": "4pm to 11pm",
+    "location": "Peshawar University Road",
+    "contact": "+92 111-222-33"
+  },
+  {
+    "id": 5,
+    "name": "Piazza Bistro",
+    "category": "italian",
+    "image": "assets/images/Italian-3.jpg",
+    "description": "Casual Italian bistro offering fresh salads, artisanal paninis, and premium espresso.",
+    "rating": 3.5,
+    "priceRange": "$10",
+    "openingTime": "4pm to 11pm",
+    "location": "Peshawar University Road",
+    "contact": "+92 111-222-33"
+  },
+  {
+    "id": 6,
+    "name": "Lotus Fusion",
+    "category": "chinese",
+    "image": "assets/images/Chinese-3.jpg",
+    "description": "Modern fusion kitchen bringing together bold Asian flavors in a contemporary setting.",
+    "rating": 3.5,
+    "priceRange": "$10",
+    "openingTime": "4pm to 11pm",
+    "location": "Peshawar University Road",
+    "contact": "+92 111-222-33"
+  }
+]

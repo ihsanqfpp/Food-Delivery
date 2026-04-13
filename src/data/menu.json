@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Margherita Classico",
+    "category": "pizza",
+    "image": "assets/images/f1.png",
+    "description": "Classic sourdough crust topped with San Marzano tomatoes, buffalo mozzarella, and fresh basil.",
+    "price": 20.00
+  },
+  {
+    "id": 2,
+    "name": "Wagyu Signature Burger",
+    "category": "burger",
+    "image": "assets/images/f2.png",
+    "description": "Premium wagyu beef patty with caramelized onions, sharp cheddar, and signature truffle aioli.",
+    "price": 15.00
+  },
+  {
+    "id": 3,
+    "name": "Pepperoni Inferno",
+    "category": "pizza",
+    "image": "assets/images/f3.png",
+    "description": "Zesty pepperoni and jalapeño mix on a thin, crispy crust with a drizzle of spicy honey.",
+    "price": 17.00
+  },
+  {
+    "id": 4,
+    "name": "Tuscan Beef Tagliatelle",
+    "category": "pasta",
+    "image": "assets/images/f4.png",
+    "description": "Handmade tagliatelle tossed in a rich, 8-hour slow-cooked beef and pancetta ragú.",
+    "price": 18.00
+  },
+  {
+    "id": 5,
+    "name": "Rosemary Sea Salt Fries",
+    "category": "fries",
+    "image": "assets/images/f5.png",
+    "description": "Triple-cooked golden fries seasoned with sea salt and fresh aromatic rosemary sprigs.",
+    "price": 10.00
+  },
+  {
+    "id": 6,
+    "name": "Quattro Formaggi",
+    "category": "pizza",
+    "image": "assets/images/f6.png",
+    "description": "A decadent four-cheese blend of mozzarella, gorgonzola, parmesan, and fontina.",
+    "price": 15.00
+  },
+  {
+    "id": 7,
+    "name": "Crispy Buttermilk Chicken",
+    "category": "burger",
+    "image": "assets/images/f7.png",
+    "description": "Crispy buttermilk chicken breast with spicy slaw and pickles in a toasted brioche bun.",
+    "price": 12.00
+  },
+  {
+    "id": 8,
+    "name": "The Beast Double Pattie",
+    "category": "burger",
+    "image": "assets/images/f8.png",
+    "description": "A towering feast featuring two flame-grilled patties, double cheese, and smoky bacon.",
+    "price": 14.00
+  }
+]
