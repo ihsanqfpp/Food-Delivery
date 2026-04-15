@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import RestaurantCard from '../ui/RestaurantCard';
 import restaurantsData from '../../data/restaurants.json';

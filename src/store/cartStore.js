@@ -41,17 +41,16 @@ export const useCartStore = create(
       clearCart: () => set({ cartItems: [] }),
 
       getCartTotal: () => {
-        const { cartItems } = get();
-        return cartItems.reduce((total, item) => total + (item.price * item.qty), 0);
+        return get().cartItems.reduce((total, item) => total + (item.price * item.qty), 0);
       },
       
       getCartCount: () => {
-        const { cartItems } = get();
-        return cartItems.reduce((total, item) => total + item.qty, 0);
+        return get().cartItems.reduce((total, item) => total + item.qty, 0);
       }
     }),
     {
-      name: 'food-delivery-cart', // localStorage key
+      name: 'food-delivery-cart',
+      version: 1,
     }
   )
 );

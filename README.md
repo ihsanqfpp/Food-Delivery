@@ -1,16 +1,58 @@
-# React + Vite
+# 🍽️ FoodFlow — Premium Food Delivery Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FoodFlow is a high-performance, industry-grade React application designed for an elite food delivery experience. Built with a focus on **visual excellence, smooth interactions, and production-ready architecture**.
 
-Currently, two official plugins are available:
+![Header](/assets/images/hero-bg.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 💎 Premium Design Features
+- **Professional Indigo Theme:** A curated Slate & Indigo palette for a high-end SaaS aesthetic.
+- **Cinematic Interactions:** Powered by `framer-motion` for fluid page transitions and button micro-animations.
+- **Micro-interactions:** Hover-lift effects, glassmorphic card designs, and squircle border-radii.
+- **Modern Typography:** Optimized with Google Fonts (Inter & Outfit) for maximum readability.
 
-## React Compiler
+## 🛠️ Tech Stack
+- **Core:** React 19 + Vite 5 (Stability-First)
+- **State Management:** Zustand (Ultra-lightweight & scalable)
+- **Animation:** Framer Motion (Production-grade motion)
+- **Styling:** Vanilla CSS + Modern Design Tokens (Non-Tailwind for maximum customizability)
+- **Routing:** React Router 7 (Remix Integrated)
+- **Notifications:** React Hot Toast
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Key Functionality
+- **Dynamic Restaurant Engine:** Real-time filtering and live search.
+- **Persistent Cart System:** Global state-driven cart with slide-out drawer.
+- **Order Lifecycle:** From shop exploration to a checkout success flow.
+- **User Dashboard:** Bento-style profile management and order history.
+- **Cinematic Auth:** Animated Login/Signup toggle experience.
 
-## Expanding the ESLint configuration
+## 📦 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+- Node.js 18+
+- npm 10+
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/food-flow.git
+   cd food-flow/frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run in development mode:
+   ```bash
+   npm run dev
+   ```
+
+## 🏗️ Deployment (Vercel)
+This project is optimized for Vercel deployment.
+1. Set the **Root Directory** to `frontend`.
+2. Ensure the **Build Command** is `npm run build`.
+3. The **Output Directory** should be `dist`.
+
+---
+*Created with ❤️ for the Professional Portfolio of [Your Name].*

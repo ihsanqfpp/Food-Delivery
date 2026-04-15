@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="col-md-4 footer-col">
             <div className="footer_detail">
               <Link to="/" className="footer-logo">
-                Food Point
+                FoodFlow
               </Link>
               <p>
                 Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with

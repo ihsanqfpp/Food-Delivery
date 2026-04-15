@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { useCartStore } from '../../store/cartStore';
 import { toast } from 'react-hot-toast';

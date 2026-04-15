@@ -1,4 +1,4 @@
-import React from 'react';
+
 import HeroSection from '../components/sections/HeroSection';
 import FeaturedRestaurants from '../components/sections/FeaturedRestaurants';
 import { motion } from 'framer-motion';

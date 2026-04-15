@@ -1028,7 +1028,7 @@ fieldset {
 
 
 
-@media only screen and(max-width:320px) {
+@media only screen and (max-width:320px) {
  .cart-content{
    width:200px !important;
  }

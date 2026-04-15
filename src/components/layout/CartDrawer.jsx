@@ -1,6 +1,6 @@
-import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCartStore } from '../../store/cartStore';
+import { Link } from 'react-router-dom';
 
 export default function CartDrawer({ isOpen, onClose }) {
   const { cartItems, removeFromCart, updateQuantity, getCartTotal } = useCartStore();
@@ -75,14 +75,15 @@ export default function CartDrawer({ isOpen, onClose }) {
                       <h6 className="m-0 mb-1 font-weight-bold" style={{ fontSize: '1rem' }}>{item.name}</h6>
                       <p className="m-0 fw-bold" style={{ color: 'var(--color-indigo-400)' }}>${item.price.toFixed(2)}</p>
                       <div className="qty-controls d-flex align-items-center mt-2 bg-dark rounded-pill p-1 w-fit" style={{ width: 'fit-content' }}>
-                        <button onClick={() => updateQuantity(item.id, -1)} className="btn btn-sm text-white px-2 py-0" style={{ boxShadow: 'none' }}>-</button>
+                        <button onClick={() => updateQuantity(item.id, -1)} className="btn btn-sm text-white px-2 py-0" style={{ boxShadow: 'none' }} aria-label={`Decrease quantity of ${item.name}`}>-</button>
                         <span className="mx-2 small font-weight-bold">{item.qty}</span>
-                        <button onClick={() => updateQuantity(item.id, 1)} className="btn btn-sm text-white px-2 py-0" style={{ boxShadow: 'none' }}>+</button>
+                        <button onClick={() => updateQuantity(item.id, 1)} className="btn btn-sm text-white px-2 py-0" style={{ boxShadow: 'none' }} aria-label={`Increase quantity of ${item.name}`}>+</button>
                       </div>
                     </div>
                     <motion.button 
                       onClick={() => removeFromCart(item.id)} 
                       className="btn btn-sm btn-outline-danger border-0 rounded-circle"
+                      aria-label={`Remove ${item.name} from cart`}
                       whileHover={{ scale: 1.1, backgroundColor: 'rgba(220, 38, 38, 0.1)' }}
                     >
                       <i className="fa-solid fa-trash-can"></i>
@@ -98,19 +99,21 @@ export default function CartDrawer({ isOpen, onClose }) {
                   <span className="text-muted font-weight-bold">SUBTOTAL</span>
                   <span className="text-white font-weight-bold" style={{ fontSize: '1.5rem' }}>${getCartTotal().toFixed(2)}</span>
                 </div>
-                <motion.button 
-                  className="btn w-100 fw-bold py-3 shadow-lg text-white" 
-                  style={{ 
-                    backgroundColor: 'var(--color-primary)', 
-                    borderRadius: '12px', 
-                    fontSize: '1.1rem',
-                    border: 'none'
-                  }}
-                  whileHover={{ scale: 1.02, backgroundColor: 'var(--color-primary-light)' }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  Complete Checkout
-                </motion.button>
+                <Link to="/success" onClick={onClose} className="text-decoration-none">
+                  <motion.button 
+                    className="btn w-100 fw-bold py-3 shadow-lg text-white" 
+                    style={{ 
+                      backgroundColor: 'var(--color-primary)', 
+                      borderRadius: '12px', 
+                      fontSize: '1.1rem',
+                      border: 'none'
+                    }}
+                    whileHover={{ scale: 1.02, backgroundColor: 'var(--color-primary-light)' }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    Complete Checkout
+                  </motion.button>
+                </Link>
                 <p className="text-center small mt-3 text-muted">Secured payment processing</p>
               </div>
             )}

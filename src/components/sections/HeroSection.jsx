@@ -1,5 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export default function HeroSection() {
   return (
@@ -44,19 +44,20 @@ export default function HeroSection() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
                 >
-                  <motion.a 
-                    href="/restaurants" 
-                    className="btn btn-lg rounded-pill px-5 py-3 text-white font-weight-bold shadow-2xl" 
-                    style={{ 
-                      backgroundColor: 'var(--color-primary)', 
-                      border: 'none',
-                      fontSize: '1.1rem'
-                    }}
-                    whileHover={{ scale: 1.05, backgroundColor: 'var(--color-primary-light)' }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Start Order
-                  </motion.a>
+                  <Link to="/restaurants" style={{ textDecoration: 'none' }}>
+                    <motion.span 
+                      className="btn btn-lg rounded-pill px-5 py-3 text-white font-weight-bold shadow-2xl d-inline-block" 
+                      style={{ 
+                        backgroundColor: 'var(--color-primary)', 
+                        border: 'none',
+                        fontSize: '1.1rem'
+                      }}
+                      whileHover={{ scale: 1.05, backgroundColor: 'var(--color-primary-light)' }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Start Order
+                    </motion.span>
+                  </Link>
                 </motion.div>
               </div>
             </div>

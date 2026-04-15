@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useCartStore } from '../../store/cartStore';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -9,6 +9,7 @@ export default function Navbar() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const profileRef = useRef(null);
   
   const cartCount = useCartStore((state) => state.getCartCount());
   const location = useLocation();
@@ -18,6 +19,27 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close profile dropdown on outside click or Escape
+  useEffect(() => {
+    if (!isProfileOpen) return;
+
+    const handleClickOutside = (e) => {
+      if (profileRef.current && !profileRef.current.contains(e.target)) {
+        setIsProfileOpen(false);
+      }
+    };
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') setIsProfileOpen(false);
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleEscape);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [isProfileOpen]);
 
   const handleNavToggle = () => setIsNavOpen(!isNavOpen);
   const closeNav = () => setIsNavOpen(false);
@@ -60,6 +82,7 @@ export default function Navbar() {
                   onClick={() => setIsCartOpen(true)}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
+                  aria-label={`Shopping cart${cartCount > 0 ? `, ${cartCount} items` : ''}`}
                 >
                   <i className="fa fa-cart-arrow-down text-white" style={{ fontSize: '1.4rem' }}></i>
                   <AnimatePresence>
@@ -94,12 +117,17 @@ export default function Navbar() {
                 </motion.button>
               </li>
               
-              <div className="action ml-3 position-relative">
+              <div className="action ml-3 position-relative" ref={profileRef}>
                 <motion.div 
                   className="profile" 
-                  onClick={() => setIsProfileOpen(!isProfileOpen)} 
+                  onClick={() => setIsProfileOpen(!isProfileOpen)}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setIsProfileOpen(!isProfileOpen); } }}
                   style={{ cursor: 'pointer', border: '2px solid var(--color-primary)', padding: '2px' }}
                   whileHover={{ scale: 1.05 }}
+                  role="button"
+                  tabIndex={0}
+                  aria-expanded={isProfileOpen}
+                  aria-label="User profile menu"
                 >
                   <img src="/assets/images/client1.jpg" alt="Profile" style={{ width: '34px', height: '34px', borderRadius: '50%', objectFit: 'cover' }} />
                 </motion.div>
